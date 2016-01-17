@@ -9,7 +9,6 @@
 
 import _ from 'lodash';
 import { assert } from 'chai';
-import sinon from 'sinon';
 
 import MockCommand from './Mocks/MockCommand';
 import Application from '../src/Application';
