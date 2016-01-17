@@ -119,5 +119,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+lib/
 .cache/*
 !.cache/.gitkeep
