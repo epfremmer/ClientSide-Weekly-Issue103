@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+/**
+ * File bin/dilemma
+ *
+ * @author Edward Pfremmer <epfremme@nerdery.com>
+ * @author Kaitlin Muth <kmuth@nerdery.com>
+ */
+
+'use strict';
+
+/**
+ * Dilemma Command
+ *
+ * usage: dilemma [-h] [-v]
+ *                partnerName {client-side,jvm,mobile,.net,php,ruby}
+ *                [{silent,confess}] [{silent,confess}]
+ *
+ * Prisoner's Dilemma
+ *
+ * Positional arguments:
+ *   partnerName           This is the name of the opponent or the player who
+ *                         was your partner in crime.
+ *   {client-side,jvm,mobile,.net,php,ruby}
+ *                         This is the discipline of your opponent. It will be
+ *                         one of the following: [client-side, jvm, mobile, .net,
+ *                          php, ruby]
+ *   {silent,confess}      This is the response of your opponent from your
+ *                         previous match with that opponent. Is one of
+ *                         “confess” or “silent”. This will not be provided in
+ *                         your first match with this opponent.
+ *   {silent,confess}      This is your response from the previous match with
+ *                         this opponent. Is one of “confess” or “silent”. This
+ *                         will not be provided in your first match with this
+ *                         opponent.
+ *
+ * Optional arguments:
+ *   -h, --help            Show this help message and exit.
+ *   -v, --version         Show program's version number and exit.
+ */
+
+process.argv.splice(2, 0, 'dilemma');
+
+var result = require('../lib/index').default;
+
+console.log(result);
