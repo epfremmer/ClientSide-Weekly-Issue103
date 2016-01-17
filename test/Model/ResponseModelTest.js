@@ -20,9 +20,7 @@ describe('ResponseModel', () => {
             assert.equal(ResponseModel.SILENT, new ResponseModel().value);
         });
         it('should throw error on invalid response values', () => {
-            assert.throw(() => {
-                new ResponseModel('invalid_response');
-            });
+            assert.throw(() => new ResponseModel('invalid_response'));
         });
     });
 
@@ -60,9 +58,7 @@ describe('ResponseModel', () => {
         it('should throw error on invalid response values', () => {
             let response = new ResponseModel(ResponseModel.CONFESS);
 
-            assert.throw(() => {
-                response.setValue('invalid_response');
-            });
+            assert.throw(() => response.setValue('invalid_response'));
         });
     });
 

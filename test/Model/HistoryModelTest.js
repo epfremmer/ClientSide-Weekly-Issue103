@@ -82,9 +82,7 @@ describe('HistoryModel', () => {
             assert.equal(0, history.confess);
         });
         it('should throw error on invalid response', () => {
-            assert.throw(() => {
-                new HistoryModel().add();
-            });
+            assert.throw(() => new HistoryModel().add());
         });
     });
 

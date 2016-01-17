@@ -42,9 +42,7 @@ describe('DilemmaArguments', () => {
             assert.equal('confess', parsedArgs.playerPreviousResponse);
         });
         it('should throw error if no arguments given', () => {
-            assert.throw(() => {
-                DilemmaArguments.parse();
-            });
+            assert.throw(() => DilemmaArguments.parse());
         });
     });
 });

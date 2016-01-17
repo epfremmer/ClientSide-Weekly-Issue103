@@ -41,10 +41,7 @@ describe('PrisonerCache', () => {
     });
     describe('getHistory', () => {
         it('should return an empty prisoner response history model', () => {
-            let stub = sandbox.stub(fs, 'existsSync', (path) => {
-                return false;
-            });
-
+            let stub = sandbox.stub(fs, 'existsSync', () => false);
             let history = new PrisonerCache().getHistory('epfremme');
 
             assert.isTrue(stub.calledOnce);
@@ -56,13 +53,8 @@ describe('PrisonerCache', () => {
             assert.equal(0, history.confess);
         });
         it('should return a prisoner response history model', () => {
-            let existsStub = sandbox.stub(fs, 'existsSync', (path) => {
-                return true;
-            });
-            let readStub = sandbox.stub(fs, 'readFileSync', (path) => {
-                return JSON.stringify({ count: 5, silent: 2, confess: 3 });
-            });
-
+            let existsStub = sandbox.stub(fs, 'existsSync', () => true);
+            let readStub = sandbox.stub(fs, 'readFileSync', () => JSON.stringify({ count: 5, silent: 2, confess: 3 }));
             let history = new PrisonerCache().getHistory('epfremme');
 
             assert.isTrue(readStub.calledOnce);
@@ -79,16 +71,8 @@ describe('PrisonerCache', () => {
     });
     describe('setHistory', () => {
         it('should store an existing prisoner response history model', () => {
-            let stub = sandbox.stub(fs, 'writeFileSync', (path) => {
-                return true;
-            });
-
-            let history = new HistoryModel(JSON.stringify({
-                count: 5,
-                silent: 3,
-                confess: 2
-            }));
-
+            let stub = sandbox.stub(fs, 'writeFileSync', () => true);
+            let history = new HistoryModel(JSON.stringify({ count: 5, silent: 3, confess: 2 }));
             let result = new PrisonerCache().setHistory('epfremme', history);
 
             assert.isTrue(result);

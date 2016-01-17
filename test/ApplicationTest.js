@@ -47,17 +47,13 @@ describe('Application', () => {
         it('should throw error if registering invalid command type', () => {
             let application = new Application();
 
-            assert.throw(() => {
-                application.register({});
-            });
+            assert.throw(() => application.register({}));
         });
         it('should register new command with application', () => {
             let application = new Application();
             let command = () => {};
 
-            assert.throw(() => {
-                application.register(command);
-            });
+            assert.throw(() => application.register(command));
         });
     });
     describe('run', () => {
@@ -79,9 +75,7 @@ describe('Application', () => {
                 'missing-command'
             ]);
 
-            assert.throw(() => {
-                application.run();
-            });
+            assert.throw(() => application.run());
         });
     });
 });

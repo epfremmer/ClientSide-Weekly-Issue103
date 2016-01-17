@@ -36,9 +36,7 @@ describe('ResponseProvider', () => {
             assert.equal(ResponseModel.CONFESS, new ResponseProvider().getResponse(history));
         });
         it('should throw an error on invalid history', () => {
-            assert.throw(() => {
-                new ResponseProvider().getResponse();
-            });
+            assert.throw(() => new ResponseProvider().getResponse());
         });
     });
 
