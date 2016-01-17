@@ -56,4 +56,4 @@ export function parse(argv) {
     }
 
     return Parser.parseArgs(argv.slice(2));
-};
+}
