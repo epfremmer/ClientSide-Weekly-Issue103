@@ -40,7 +40,7 @@ export default class DilemmaCommand {
      * DilemmaCommand Constructor
      *
      * @constructor
-     * @param {array} args
+     * @param {Array} args
      */
     constructor(args) {
         this.args = this._parseArgs(args);
@@ -70,7 +70,7 @@ export default class DilemmaCommand {
      * Parse command arguments
      *
      * @private
-     * @param {array} args
+     * @param {Array} args
      * @returns {Namespace}
      */
     _parseArgs(args) {

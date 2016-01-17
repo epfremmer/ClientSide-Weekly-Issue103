@@ -27,7 +27,7 @@ export default class Application {
      * Application Constructor
      *
      * @constructor
-     * @param {array} argv
+     * @param {Array} argv
      */
     constructor(argv = process.argv) {
         this.args = argv;
