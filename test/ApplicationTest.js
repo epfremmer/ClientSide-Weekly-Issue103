@@ -9,6 +9,7 @@
 
 import _ from 'lodash';
 import { assert } from 'chai';
+import { describe, it } from 'mocha';
 
 import MockCommand from './Mocks/MockCommand';
 import Application from '../src/Application';

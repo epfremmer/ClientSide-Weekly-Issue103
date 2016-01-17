@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { assert } from 'chai';
+import { describe, it, beforeEach, afterEach } from 'mocha';
 import sinon from 'sinon';
 
 import PrisonerCache from '../../src/Cache/PrisonerCache';

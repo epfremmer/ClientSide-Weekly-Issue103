@@ -9,6 +9,7 @@
 
 import { assert } from 'chai';
 import { Namespace } from 'argparse';
+import { describe, it } from 'mocha';
 import sinon from 'sinon';
 
 import DilemmaCommand from '../../src/Command/DilemmaCommand';
