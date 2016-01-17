@@ -1,5 +1,7 @@
 # Prisoner's Dilemma
 
+Edward Pfremmer (dba Kaitlin Muth)
+
 ## Requirements
 
 * node version >= 0.10
