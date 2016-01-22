@@ -8,8 +8,7 @@ Edward Pfremmer (dba Kaitlin Muth)
 
 ## Installation
 
-* npm install
-* npm run build
+* npm install --production
 
 ## Usage
 
